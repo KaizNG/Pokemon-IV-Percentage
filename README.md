@@ -1,5 +1,5 @@
 # [Pokémon IV% Checker]
-[![MIT License][license-img]][license] ![hiatus] [![changelog-img]][changelog] [![Version][version-img]][changelog] [![Made With Python][python-img]][python]
+[![MIT License][license-img]][license] ![Status][hiatus] [![changelog-img]][changelog] [![Version][version-img]][changelog] [![Made With Python][python-img]][python]
 
 This is a simple script to calculate your pokémon's IV percentage.\
 You are required to input your pokémon's attack, defense, and stamina/hp IVs.\
@@ -17,9 +17,8 @@ You are then given a percentage, which will be your pokémon's IV %.
 [stopped]: https://img.shields.io/badge/status-Not%20Updating-red.svg
 [hiatus]: https://img.shields.io/badge/Status-On%20Hiatus-orange.svg
 [updating]: https://img.shields.io/badge/status-Updating-009b31.svg
-[version-img]: https://badge.fury.io/gh/KaizNG%2FFoodFinder.svg
+[version-img]: https://badge.fury.io/gh/KaizNG%2FPokemon-IV-Percentage.svg
 
-[version-img]: https://badge.fury.io/gh/KaizNG%2FFoodFinder.svg
 
 [changelog-img]: https://img.shields.io/badge/changelog-545454.svg
 [changelog]: ./CHANGELOG.md
