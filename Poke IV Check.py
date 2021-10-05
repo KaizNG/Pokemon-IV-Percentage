@@ -1,13 +1,10 @@
 """
 Simple script to calculate your pokémon's IV percentage.
-Input the attack IV, defense IV, and HP/stamina IV, and you will get a rounded percentage.
-If you so choose, you can retry with another pokémon by pressing "y" or "n" when given the "Try again? (y/n)" prompt.
+Input the attack IV, defense IV, and HP/stamina IV,
+and you will get a rounded percentage.
 """
 
 import os
-
-#Clears the previous code output if any.
-os.system('cls' if os.name == 'nt' else 'clear')
 
 #This makes it so that when the function is called, the user can only enter in numbers between 0 and the number stated
 def inputRestriction(num):
@@ -32,28 +29,29 @@ def inputRestriction(num):
 
 #Collecting Pokemon IV Values
 def PerfectionFinder():
-  print(f"\nEnter Attack value (0-15): ")
+  #Clears the previous code output if any.
+  os.system('cls' if os.name == 'nt' else 'clear')
+
+  print("\nEnter Attack value (0-15): ")
   attack = inputRestriction(15)
 
-  print(f"\nEnter Defense value (0-15): ")
+  print("\nEnter Defense value (0-15): ")
   defense = inputRestriction(15)
 
-  print(f"\nEnter HP value (0-15): ")
+  print("\nEnter HP value (0-15): ")
   stamina = inputRestriction(15)
 
-  IVCollection = attack + defense + stamina
-  perfection = (IVCollection / 45) * 100
-  result = round(perfection)
+  result = round(((attack + defense + stamina) / 45) * 100)
 
-  print("\nYour pokémon is " + str(result) + "% perfect.\n")
+  print("\nYour pokémon is {}% perfect.\n".format(result))
 
   #To try again
-  r = input("Try again? (y/n)\n")
-  if r == "yes" or r == "y" or r == "":
-    os.system('cls' if os.name == 'nt' else 'clear')
-    PerfectionFinder()
-  if r == "no" or r == "n":
+  x = input("Try again? (Enter anything to continue, Enter \"n\" to stop)\n").lower()
+  if x == "n":
     print("\nTerminating Script.")
+    quit()
+  else:
+    PerfectionFinder()
 
 #Calls the function
 PerfectionFinder()
